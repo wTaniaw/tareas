@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+        </title>
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+        <link rel="stylesheet" href="my.css" />
+        <style>
+            /* App custom styles */
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.js">
+        </script>
+        <script src="my.js">
+        </script>
+    </head>
+    <body>
+        <!-- Home -->
+        <div data-role="page" data-theme="h" id="page1">
+            <div data-role="content" style="padding: 15px">
+                <div style=" text-align:center">
+                    <img style="width: 60%; height: 10%" src="http://eav.utch.edu.mx/file.php/1/LOGOUTCHV.jpg" />
+                </div>
+                <form method="POST" action="" name="formulario">
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <label for="textinput1">
+                            Tarea
+                        </label>
+                        <input id="textinput1" placeholder="" value="" type="text" name="descripcion"/>
+                    </fieldset>
+                </div>
+                <div data-role="fieldcontain">
+                    <label for="selectmenu1">
+                        Selecciona materia
+                    </label>
+                    <select name="materia" id="selectmenu1" data-theme="a">
+                         #{list items:listamaterias, as:'e'}
+                         <option value="${e.nombre_materia}"  >${e.nombre_materia}</option>
+                         #{/list}
+                    </select>
+                </div>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        
+                          <label for="textinput1">
+                            Mes
+                        </label>
+                        <input id="textinput1" placeholder="" value="" type="text" name="mes"/>
+                        <label for="textinput1">
+                            Dia
+                        </label>
+                        <input id="textinput1" placeholder="" value="" type="text" name="dia"/>
+                        <label for="textinput1">
+                            Año
+                        </label>
+                        <input id="textinput1" placeholder="" value="" type="text" name="ano"/><br>
+                        <input id="" placeholder="" value="Insertar!" type="submit" name="enviar"/>
+                        <form>
+                            
+                    </fieldset>
+                    <center>${mensaje}</center>
+                </div>
+            </div>
+        </div>
+        <script>
+            //App custom javascript
+        </script>
+    </body>
+</html>

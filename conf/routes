@@ -1,0 +1,27 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                                       Application.index
+GET     /index.html                                       Application.index
+POST     /addMateria.html                                       Application.addMateria
+GET     /addMateria.html                                 Application.addMateria
+
+*     /addTarea.html                                      Application.addTarea
+*     /verTareas.html                                  Application.verTareas
+*     /verTareasCel.html                                  Application.verTareasCel
+*     /addMateriaCel.html                                  Application.addMateriaCel
+*     /addTareaCel.html                                  Application.addTareaCel
+*     /Cel.html                                  Application.Cel
+*     /delete.html                                  Application.delete
+*     /update.html                                  Application.update
+GET     /borrar.html                                  Application.borrar
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}

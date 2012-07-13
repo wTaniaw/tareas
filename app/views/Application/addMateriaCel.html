@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>
+        </title>
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+        <link rel="stylesheet" href="/public/stylesheets/my.css" />
+        <style>
+            /* App custom styles */
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.0/jquery.mobile-1.1.0.min.js">
+        </script>
+        <script src="/public/javascripts/my.js">
+        </script>
+    </head>
+    <body>
+        <!-- Home -->
+        <div data-role="page" id="page1">
+            <div data-role="content" style="padding: 15px">
+                <div style=" text-align:center">
+                    <img style="width: 60%; height: 10%" src="http://eav.utch.edu.mx/file.php/1/LOGOUTCHV.jpg" />
+                </div>
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <form action="" method="POST">
+                        <label for="textinput1">
+                            Materia o Tema
+                        </label></br>
+                        <input id="textinput1" placeholder="" value="" type="text" name="materia"/><br>
+                        <input type="submit" value="Insertar!" name="enviar">
+                        </form>
+                    </fieldset>
+                </div>
+                ${mensaje}
+            </div>
+        </div>
+        <script>
+            //App custom javascript
+        </script>
+    </body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"[]>
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US" xml:lang="en">
+<head>
+    <!--
+    Created by Artisteer v3.1.0.48375
+    Base template (without user's data) checked by http://validator.w3.org : "This page is valid XHTML 1.0 Transitional"
+    -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Tareas Pendientes</title>
+
+
+
+    <link rel="stylesheet" href="/public/stylesheets/style.css" type="text/css" media="screen" />
+    <!--[if IE 6]><link rel="stylesheet" href="style.ie6.css" type="text/css" media="screen" /><![endif]-->
+    <!--[if IE 7]><link rel="stylesheet" href="style.ie7.css" type="text/css" media="screen" /><![endif]-->
+
+    
+    <script type="text/javascript" src="/public/javascripts/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="/public/javascripts/jquery.lksMenu.js"></script>
+        <link rel="stylesheet" type="text/css" href="/public/stylesheets/lksMenuSkin2.css" />
+        <script>
+        $('document').ready(function(){
+            $('.menu').lksMenu();
+        });
+        </script>
+        
+    
+    <script type="text/javascript" src="/public/javascripts/jquery.js"></script>
+    <script type="text/javascript" src="/public/javascripts/script.js"></script>
+   <style type="text/css">
+.art-post .layout-item-0 { padding-right: 10px;padding-left: 10px; }
+   .ie7 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+   .ie6 .art-post .art-layout-cell {border:none !important; padding:0 !important; }
+   </style>
+
+</head>
+<body>
+<div id="art-main">
+    <div class="cleared reset-box"></div>
+    <div class="art-header">
+        <div class="art-header-position">
+            <div class="art-header-wrapper">
+                <div class="cleared reset-box"></div>
+                <div class="art-header-inner">
+                <div class="art-logo">
+                                 <h1 class="art-logo-name"><a href="./index.html">Tareas Pendientes</a></h1>
+                                                 <h2 class="art-logo-text">TIS51M</h2>
+                                </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="cleared reset-box"></div>
+<div class="art-bar art-nav">
+<div class="art-nav-outer">
+<div class="art-nav-wrapper">
+<div class="art-nav-inner">
+	<ul class="art-hmenu">
+		<li>
+			<a href="index.html" >Ver Tareas</a>
+		</li>	
+		<li>
+			<a href="addTarea.html" class="active">Agregar Tarea</a>
+		</li>	
+		<li>
+			<a href="addMateria.html">Agregar Materia o Tema</a>
+		</li>	
+		<li>
+			<a href="delete.html">Eliminar Tareas</a>
+		</li>	
+               <li>
+			<a href="update.html">Modificar Tarea</a>
+		</li>
+	</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="cleared reset-box"></div>
+<div class="art-box art-sheet">
+        <div class="art-box-body art-sheet-body">
+            <div class="art-layout-wrapper">
+                <div class="art-content-layout">
+                    <div class="art-content-layout-row">
+                        <div class="art-layout-cell art-content">
+<div class="art-box art-post">
+    <div class="art-box-body art-post-body">
+<div class="art-post-inner art-article">
+                                <h2 class="art-postheader"><span class="art-postheadericon">Agregar Tarea<br><br><br>
+                                </span></h2>
+                                                <div class="art-postcontent">
+<div class="art-content-layout">
+    <div class="art-content-layout-row">
+    <div class="art-layout-cell layout-item-0" style="width: 100%;">
+        <form action="" method="post">
+        <p style="text-align: center;">
+            
+           
+            
+            Tarea<br><input type="text" name="descripcion"></input><br><br>
+            <link rel="stylesheet" href="/public/stylesheets/ui.daterangepicker.css" type="text/css" />
+		<link rel="stylesheet" href="/public/stylesheets/redmond/jquery-ui-1.7.1.custom.css" type="text/css" title="ui-theme" />
+<script type="text/javascript" src="/public/javascripts/jquery-1.3.1.min.js"></script>
+		<script type="text/javascript" src="/public/javascripts/jquery-ui-1.7.1.custom.min.js"></script>
+		<script type="text/javascript" src="/public/js/daterangepicker.jQuery.js"></script>
+<script>
+	$(function() {
+		$( "#datepicker" ).datepicker();
+	});
+	</script>
+
+
+
+<div class="demo">
+
+    <p align="center">Fecha<br> <input type="text" id="datepicker" name="fecha"><br><br>
+Materia<br><select class="element select medium" id="materia" name="materia"> 
+                                                
+                                                #{list items:listamaterias, as:'e'}
+                                                <option value="${e.nombre_materia}"  >${e.nombre_materia}</option>
+                                                #{/list}
+
+                                            </select><br><br>
+    </p>
+</div>
+            
+        </p>
+            <center> <input type="submit" value="Agregar tarea!! "name="enviar"></center><br><br>
+        </form>
+        <center>${mensaje}</center>
+    </div>
+    </div>
+</div>
+<div class="art-content-layout">
+    <div class="art-content-layout-row">
+    <div class="art-layout-cell layout-item-0" style="width: 50%;">
+        <br />
+    </div><div class="art-layout-cell layout-item-0" style="width: 50%;">
+        <p><br /></p>
+    </div>
+    </div>
+</div>
+
+                </div>
+                <div class="cleared"></div>
+                </div>
+
+		<div class="cleared"></div>
+    </div>
+</div>
+
+                          <div class="cleared"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cleared"></div>
+            
+    		<div class="cleared"></div>
+        </div>
+    </div>
+    <div class="art-footer">
+        <div class="art-footer-body">
+            <div class="art-footer-center">
+                <div class="art-footer-wrapper">
+                    <div class="art-footer-text">
+                        <a href="#" class="art-rss-tag-icon" title="RSS"></a>
+                        
+
+<p>Copyright © 2012. All Rights Reserved.Tania Carolina Torres Heredia</p>
+                        <div class="cleared"></div>
+                                           </div>
+                </div>
+            </div>
+            <div class="cleared"></div>
+        </div>
+    </div>
+    <div class="cleared"></div>
+</div>
+
+</body>
+</html>

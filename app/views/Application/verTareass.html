@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Animated Text and Icon Menu with jQuery</title>
+		<meta charset="UTF-8" />
+        <meta name="description" content="Animated Text and Icon Menu with jQuery" />
+        <meta name="keywords" content="jquery, menu, navigation, sliding, animation, icon" />
+		<meta name="author" content="Codrops" />
+        <link rel="stylesheet" type="text/css" href="/public/stylesheets/style.css" />
+		<link rel="stylesheet" type="text/css" href="/public/stylesheets/stimenu.css" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=Wire+One&v1' rel='stylesheet' type='text/css' />
+    </head>
+    <body>
+		<div class="container">
+			<h1>Tareas pendientes<span> TIS51M</span></h1>
+			<ul id="sti-menu" class="sti-menu">
+				
+				
+				
+		#{list items:tarea, as:'e'}
+				<li data-hovercolor="#ffdd3f">
+					<a href="#">
+						<h2 data-type="mText" class="sti-item">${e.materia}</h2>
+						<h3 data-type="sText" class="sti-item">${e.descripcion}</h3>
+						<span data-type="icon" class="sti-icon sti-icon-technology sti-item"></span>
+					</a>
+				</li>
+                                #{/list}
+			</ul>
+			
+			<div class="footer">
+				<a href="http://tympanus.net/Development/SlidingBackgroundImageMenu/example5.html"><span>&laquo; Previous Demo: </span>Sliding Background Image Menu</a>
+				<span class="right_ab">
+					<a href="http://thenounproject.com/" target="_blank">Icons by The Noun Project</a>
+					<a href="http://tympanus.net/codrops/2011/07/12/animated-text-and-icon-menu/"><strong>back to the Codrops post</strong></a>
+				</span>
+			</div>
+		</div>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="public/javascripts/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="public/javascripts/jquery.iconmenu.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#sti-menu').iconmenu({
+					animMouseenter	: {
+						'mText' : {speed : 400, easing : 'easeOutExpo', delay : 140, dir : 1},
+						'sText' : {speed : 400, easing : 'easeOutExpo', delay : 0, dir : 1},
+						'icon'  : {speed : 800, easing : 'easeOutBounce', delay : 280, dir : 1}
+					},
+					animMouseleave	: {
+						'mText' : {speed : 400, easing : 'easeInExpo', delay : 140, dir : 1},
+						'sText' : {speed : 400, easing : 'easeInExpo', delay : 280, dir : 1},
+						'icon'  : {speed : 400, easing : 'easeInExpo', delay : 0, dir : 1}
+					}
+				});
+			});
+		</script>
+    </body>
+</html>
